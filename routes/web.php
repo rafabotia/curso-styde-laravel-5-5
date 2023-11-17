@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', function () {
-    return 'Ususarios';
+    return 'Usuarios';
 });
 
 Route::get('/usuarios/nuevo', function () {
