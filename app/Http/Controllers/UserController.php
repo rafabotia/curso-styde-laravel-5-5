@@ -18,12 +18,12 @@ class UserController extends Controller
 
         $title = 'Listado de usuarios';
 
-        return view('users',compact('users', 'title'));
+        return view('users.index',compact('users', 'title'));
     }
 
     public function show($id)
     {
-        return view('users-show', compact('id'));
+        return view('users.show', compact('id'));
     }
 
     public function create()
