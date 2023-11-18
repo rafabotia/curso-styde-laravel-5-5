@@ -1,14 +1,9 @@
-@include('header')
+@extends('layout')
 
-    <div class="row mt-5">
-        <div class="col-8">
-            <h1>Usuario #{{ $id }}</h1>
+@section('title', "Usuario {$id}")
 
-            Mostrando detalle del usuario: {{ $id }}
-        </div>
-        <div class="col-4">
-            @include('sidebar')
-        </div>
-    </div>
+@section('content')
+    <h1>Usuario #{{ $id }}</h1>
 
-@include('footer')
+    Mostrando detalle del usuario: {{ $id }}
+@endsection

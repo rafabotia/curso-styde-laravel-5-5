@@ -1,20 +1,24 @@
-@include('header')
+@extends('layout')
 
-    <div class="row mt-5">
-        <div class="col-8">
-            <h1>{{ $title }}</h1>
+@section('title', "Usuarios")
 
-            <ul>
-                @forelse ($users as $user)
-                    <li>{{ $user }}</li>
-                @empty
-                    <li>No hay usuarios registrados</li>
-                @endforelse
-            </ul>
-        </div>
-        <div class="col-4">
-            @include('sidebar')
-        </div>
-    </div>
+@section('content')
 
-@include('footer')
+    <h1>{{ $title }}</h1>
+
+    <ul>
+        @forelse ($users as $user)
+            <li>{{ $user }}</li>
+        @empty
+            <li>No hay usuarios registrados</li>
+        @endforelse
+    </ul>
+
+@endsection
+
+<!-- Sobrescribe la sección creada en el layout -->
+@section('sidebar')
+    @parent
+
+    <h2>Barra lateral personalizada!</h2>
+@endsection
